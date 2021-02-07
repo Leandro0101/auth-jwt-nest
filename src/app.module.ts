@@ -5,10 +5,12 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
+import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   imports: [
     AuthModule,
+    TasksModule,
     ConfigModule.forRoot(),
     UsersModule,
     MongooseModule.forRoot(
