@@ -12,4 +12,8 @@ export class UserService {
 
     return await createdUser.save();
   }
+
+  async getByEmail(email: string): Promise<User> {
+    return await this.userModel.findOne({ email }).exec();
+  }
 }
